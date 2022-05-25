@@ -7,12 +7,12 @@
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <a class="navigation-logo">
+        <a class="navigation-logo" href="index.html">
           <img class="page-header-logo" src="img/logo.svg" width="139" height="70" alt="Логотип Город Седона">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Главная</a>
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
@@ -39,7 +39,79 @@
       </nav>
     </header>
     <main class="main-inner">
-
+      <header class="main-inner-header">
+        <h1 class="inner-header-title">Гостиницы Седоны</h1>
+        <ul class="breadcrumps">
+          <li class="braedcrumps-item">
+            <a class="breadcrumps-limk" href="index.html">
+              <span class="visually-hidden">Главная</span>
+            </a>
+          </li>
+          <li class="braedcrumps-item">
+            <a class="breadcrumps-limk">Гостиницы</a>
+          </li>
+        </ul>
+        <section class="hotel-catalog">
+          <h2 class="visually-hidden">Каталог отелей с фильтрами</h2>
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-titel">Инфраструктура:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="pool" checked>
+                    Бассейн
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="parking" checked>
+                    Парковка
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="wifi">
+                    Wi-Fi
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-titel">Тип жилья:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="hotel" checked>
+                    Гостиница
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="motel">
+                    Мотель
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="apartaments">
+                    Апартаменты
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+              <label for="control-input-price-from" class="visually-hidden">Стоимость от</label>
+              <input type="number" name="price-from" id="control-input-price-from" placeholder="0 от">
+              <label for="control-input-price-to" class="visually-hidden">Стоимость до</label>
+              <input type="number" name="price-to" id="control-input-price-to" placeholder="9000 до">
+            </fieldset>
+            <button class="button" type="submit">Применить</button>
+            <button class="button-reset" type="reset">Сбросить</button>
+          </form>
+        </section>
+      </header>
     </main>
     <footer class="page-footer">
       <ul class="social-list">
