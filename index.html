@@ -5,14 +5,20 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+
+    <!--Шапка-->
     <header class="page-header">
       <nav class="navigation">
+
+        <!--Логотип-->
         <a class="navigation-logo">
-          <img class="page-header-logo" src="#" alt="Логотип Город Седона">
+          <img class="page-header-logo" src="images/logo.svg" width="139" height="70" alt="Логотип Город Седона">
         </a>
+
+        <!--Основная навигация-->
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Главная</a>
+            <a class="navigation-link current-site-page">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
@@ -21,6 +27,8 @@
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
+
+        <!--Меню пользователя-->
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
@@ -29,9 +37,10 @@
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden">Избранное</span>
+              <span class="visually-hidden">Избранное содержит</span>
+              <span>12</span>
+              <span class="visually-hidden">гостиниц</span>
             </a>
-            <span class="favorites-amount">12</span>
           </li>
           <li class="navigation-item">
             <a class="navigation-link button-link" href="#">Хочу сюда!</a>
@@ -39,42 +48,50 @@
         </ul>
       </nav>
     </header>
+
+    <!--Основное содержание-->
     <main class="main-index">
-      <h1 class="visually-hidden">Добро пожаловать в город Седона</h1>
+
+      <!--Главный заголовок-->
+      <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
+
+      <!--Промо-->
       <section class="promo">
-        <h2 class="visually-hidden">О Седоне</h2>
-        <img src="#" alt="Welcome to the gorgeous Sedona">
+        <h2 class="visually-hidden">О городе Седона</h2>
+        <img src="images/promo-welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
         <p>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</p>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
+
+      <!--Преимущества-->
       <section class="advantages">
-        <h2 class="visually-hidden">Преимущества Седоны</h2>
+        <h2 class="visually-hidden">Преимущества города Седона</h2>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
         <ol class="advantages-main-list">
           <li class="advantages-main-item">
             <h3>Настоящий<br>городок</h3>
             <p>— №1 —</p>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="#" alt="Улица в Седоне">
+            <img src="images/advantage-1.jpeg" width="800" height="384" alt="Улица в Седоне">
               <ul class="advantages-sub-list">
                 <li class="advantages-sub-item">
-                  <h3>Жильё</h3>
+                  <h4>Жильё</h4>
                   <p>Рекомендуем пожить<br>в настоящем мотеле, всё как в кино!</p>
                 </li>
                 <li class="advantages-sub-item">
-                  <h3>Еда</h3>
+                  <h4>Еда</h4>
                   <p>Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!</p>
                 </li>
                 <li class="advantages-sub-item">
-                  <h3>Сувениры</h3>
+                  <h4>Сувениры</h4>
                   <p>Не только китайского,<br>но и настоящего местного производства!</p>
                 </li>
               </ul>
           </li>
           <li class="advantages-main-item">
-            <img src="#" alt="Каньон в Седоне">
             <h3>Там есть <br>мост дьявола</h3>
             <p>— №2 —</p>
             <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <img src="images/advantage-2.jpeg" width="800" height="384" alt="Каньон в Седоне">
           </li>
           <li class="advantages-main-item">
             <h3>Небольшая<br>площадь</h3>
@@ -93,11 +110,15 @@
           </li>
         </ol>
       </section>
+
+      <!--Поиск гостиниц-->
       <section class="hotel-search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="search-link button-link" href="catalog.html">ПОИСК ГОСТИНИЦЫ В седоне</a>
       </section>
+
+      <!--Форма подписки-->
       <section class="subscription-form">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -108,6 +129,8 @@
         </form>
       </section>
     </main>
+
+    <!--Подвал-->
     <footer class="page-footer">
       <ul class="social-list">
         <li class="social-item">
