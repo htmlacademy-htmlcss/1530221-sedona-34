@@ -5,11 +5,17 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+
+    <!--Шапка-->
     <header class="page-header">
       <nav class="navigation">
+
+        <!--Логотип-->
         <a class="navigation-logo" href="index.html">
           <img class="page-header-logo" src="#" alt="Логотип Город Седона">
         </a>
+
+        <!--Основная навигация-->
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
@@ -21,6 +27,8 @@
             <a class="navigation-link" href="#">Гостиницы</a>
           </li>
         </ul>
+
+        <!--Меню пользователя-->
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
@@ -40,9 +48,15 @@
         </ul>
       </nav>
     </header>
+
+    <!--Основное содержание-->
     <main class="main-inner">
+
+      <!--Шапка основного содержания-->
       <header class="main-inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
+
+        <!--Хлебные крошки-->
         <ol class="breadcrumps">
           <li class="braedcrumps-item">
             <a class="breadcrumps-limk" href="index.html">
@@ -54,8 +68,12 @@
           </li>
         </ol>
       </header>
+
+      <!--Каталог отелей-->
       <section class="hotel-catalog">
         <h2 class="visually-hidden">Каталог гостиниц с фильтрами</h2>
+
+        <!--Фильтрация-->
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-titel">Инфраструктура:</legend>
@@ -117,6 +135,8 @@
           <button class="button" type="submit">Применить</button>
           <button class="button-reset" type="reset">Сбросить</button>
         </form>
+
+        <!--Сортировка-->
         <p class="search-result">Найдено гостиниц: 38</p>
         <select class="select-control-sort" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
@@ -140,6 +160,8 @@
             </a>
           </li>
         </ul>
+
+        <!--Список гостиниц-->
         <ul class="hotel-list">
           <li class="hotel-card">
             <a class="hotel-card-link">
@@ -198,6 +220,8 @@
             <p class="hotel-card-rating">Рейтинг: 5,0</p>
           </li>
         </ul>
+
+        <!--Пагинация-->
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link" href="#">1</a>
@@ -218,6 +242,8 @@
             <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
+
+        <!--Отображение количества карточек на странице-->
         <label for="control-amount-card">Гостиниц на странице:</label>
         <select id="control-amount-card" aria-label="Количество карточек на странице">
           <option value="4">4</option>
@@ -225,6 +251,8 @@
           <option value="16">16</option>
         </select>
       </section>
+
+      <!--Форма подписки-->
       <section class="subscription-form">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -235,6 +263,8 @@
         </form>
       </section>
     </main>
+
+    <!--Подвал-->
     <footer class="page-footer">
       <ul class="social-list">
         <li class="social-item">
