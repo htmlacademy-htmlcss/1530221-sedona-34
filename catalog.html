@@ -37,7 +37,7 @@
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden">В избранное добавлено</span>
+              <span class="visually-hidden">Избранное содержит</span>
               <span>12</span>
               <span class="visually-hidden">гостиниц</span>
             </a>
@@ -124,9 +124,9 @@
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
             <label for="control-input-price-from" class="visually-hidden">Стоимость от</label>
-            <input type="number" name="price-from" id="control-input-price-from" placeholder="0 от">
+            <input type="number" name="price-from" id="control-input-price-from" min="0" placeholder="0 от">
             <label for="control-input-price-to" class="visually-hidden">Стоимость до</label>
-            <input type="number" name="price-to" id="control-input-price-to" placeholder="9000 до">
+            <input type="number" name="price-to" id="control-input-price-to" max="9000" placeholder="9000 до">
             <p class="slider">
             <span class="slider-price-from visually-hidden">Cтоимость от</span>
             <span class="slider-price-to visually-hidden">Cтоимость до</span>
@@ -145,7 +145,7 @@
         </select>
         <ul class="view-control-list">
           <li class="view-control-item">
-            <a class="button-view card" href="#">
+            <a class="button-view card selected">
               <span class="visually-hidden">Показать карточки</span>
             </a>
           </li>
@@ -174,7 +174,7 @@
             </dl>
             <a class="hotel-card-detail" href="#">подробнее</a>
             <button class="hotel-card-favorites">в избранное</button>
-            <span class="hotel-rating-stars">Рейтинг в звездах (4 звезды)</span>
+            <span class="hotel-rating-stars visually-hidden">Рейтинг в звездах - 4 звезды</span>
             <p class="hotel-card-rating">Рейтинг: 8,5</p>
           </li>
           <li class="hotel-card">
@@ -188,7 +188,7 @@
             </dl>
             <a class="hotel-card-detail" href="#">подробнее</a>
             <button class="hotel-card-favorites-add">в избранном</button>
-            <span class="hotel-rating-stars">Рейтинг в звездах (4 звезды)</span>
+            <span class="hotel-rating-stars visually-hidden">Рейтинг в звездах - 4 звезды</span>
             <p class="hotel-card-rating">Рейтинг: 9,2</p>
           </li>
           <li class="hotel-card">
@@ -202,7 +202,7 @@
             </dl>
             <a class="hotel-card-detail" href="#">подробнее</a>
             <button class="hotel-card-favorites">в избранное</button>
-            <span class="hotel-rating-stars">Рейтинг в звездах (3 звезды)</span>
+            <span class="hotel-rating-stars visually-hidden">Рейтинг в звездах - 3 звезды</span>
             <p class="hotel-card-rating">Рейтинг: 6,9</p>
           </li>
           <li class="hotel-card">
@@ -216,7 +216,7 @@
             </dl>
             <a class="hotel-card-detail" href="#">подробнее</a>
             <button class="hotel-card-favorites">в избранное</button>
-            <span class="hotel-rating-stars">Рейтинг в звездах (2 звезды)</span>
+            <span class="hotel-rating-stars visually-hidden">Рейтинг в звездах - 2 звезды</span>
             <p class="hotel-card-rating">Рейтинг: 5,0</p>
           </li>
         </ul>
@@ -224,7 +224,7 @@
         <!--Пагинация-->
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link current-catalog-page" href="#">1</a>
+            <a class="pagination-link current-catalog-page">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
