@@ -31,21 +31,23 @@
         </ul>
 
         <!--МЕНЮ ПОЛЬЗОВАТЕЛЯ-->
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+        <ul class="user-list">
+          <li class="user-item">
+            <a class="user-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="user-item">
+            <a class="user-link" href="#">
               <span class="visually-hidden">Избранное содержит</span>
               <span>12</span>
               <span class="visually-hidden">гостиниц</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link button-link here" href="#">Хочу сюда!</a>
+          <li class="user-item">
+            <div class="button-link here">
+              <a class="user-link" href="#">Хочу сюда!</a>
+            </div>
           </li>
         </ul>
       </nav>
@@ -180,7 +182,9 @@
               <dt class="hotel-type">Гостиница</dt>
               <dd class="hotel-price">От 4000 ₽</dd>
             </dl>
-            <a class="hotel-card-detail button-link" href="#">подробнее</a>
+            <div class="button-link detail">
+              <a class="hotel-card-about" href="#">подробнее</a>
+            </div>
             <button class="hotel-card-favorites">в избранное</button>
             <span class="hotel-rating-stars visually-hidden">Рейтинг в звездах - 4 звезды</span>
             <p class="hotel-card-rating">Рейтинг: 8,5</p>
@@ -194,7 +198,9 @@
               <dt class="hotel-type">Гостиница</dt>
               <dd class="hotel-price">От 5000 ₽</dd>
             </dl>
-            <a class="hotel-card-detail button-link" href="#">подробнее</a>
+            <div class="button-link detail">
+              <a class="hotel-card-about" href="#">подробнее</a>
+            </div>
             <button class="hotel-card-favorites add">в избранном</button>
             <span class="hotel-rating-stars visually-hidden">Рейтинг в звездах - 4 звезды</span>
             <p class="hotel-card-rating">Рейтинг: 9,2</p>
@@ -208,7 +214,9 @@
               <dt class="hotel-type">Гостиница</dt>
               <dd class="hotel-price">От 2500 ₽</dd>
             </dl>
-            <a class="hotel-card-detail button-link" href="#">подробнее</a>
+            <div class="button-link detail">
+              <a class="hotel-card-about" href="#">подробнее</a>
+            </div>
             <button class="hotel-card-favorites">в избранное</button>
             <span class="hotel-rating-stars visually-hidden">Рейтинг в звездах - 3 звезды</span>
             <p class="hotel-card-rating">Рейтинг: 6,9</p>
@@ -222,7 +230,9 @@
               <dt class="hotel-type">Гостиница</dt>
               <dd class="hotel-price">От 1500 ₽</dd>
             </dl>
-            <a class="hotel-card-detail button-link" href="#">подробнее</a>
+            <div class="button-link detail">
+              <a class="hotel-card-about" href="#">подробнее</a>
+            </div>
             <button class="hotel-card-favorites">в избранное</button>
             <span class="hotel-rating-stars visually-hidden">Рейтинг в звездах - 2 звезды</span>
             <p class="hotel-card-rating">Рейтинг: 5,0</p>
@@ -296,8 +306,10 @@
       <a href="tel:88128121212">
         <span class="phone">+7 (812) 812-12-12</span>
       </a>
-      <a href="#">
-        <span class="visually-hidden">Сайт HTML Academy</span>
-      </a>
+      <div class="html-academy-logo">
+        <a href="#">
+          <img src="/images/HTML Academy logo.svg" width="114.9" height="32.9" alt="Логотип HTML Academy">
+        </a>
+      </div>
     </footer>
   </body>

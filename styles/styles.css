@@ -30,7 +30,6 @@ h1 {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  color: #ffffff;
 }
 
 h2 {
@@ -53,12 +52,16 @@ p {
   color: #333333;
 }
 
+a {
+  text-decoration: none;
+}
+
 ol {
   font-size: 18px;
   line-height: 21px;
 }
 
-/* СКРЫТЫЕ ЭЛЕМЕНТЫ */
+/* СКРЫТЫЕ ЭЛЕМЕНТЫ
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -70,7 +73,7 @@ ol {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+} */
 
 /* КНОПКИ */
 button {
@@ -105,6 +108,7 @@ button {
 
 /* КНОПКИ-ССЫЛКИ */
 .button-link {
+  font-weight: 700;
   color:#ffffff;
   background-color: #756157;
   text-align: center;
@@ -127,14 +131,27 @@ button {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  color:#000000;
-  text-align: center;
+  color: #000000;
   text-transform: capitalize;
-  text-decoration: none;
 }
 
 .current-site-page {
   text-decoration: underline;
+}
+
+/* МЕНЮ ПОЛЬЗОВАТЕЛЯ */
+.user-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.here {
+  width: 160px;
+  height: 37px;
 }
 
 /* ПРОМО */
@@ -152,11 +169,21 @@ button {
 }
 
 .blue-block {
+  color: #ffffff;
   background-color: #82B3D3;
 }
 
+.blue-block p {
+  color: #ffffff;
+}
+
 .advantages-sub-list {
+  color: #000000;
   background-color: #ffffff;
+}
+
+.advantages-sub-list p {
+  color: #000000;
 }
 
 .white-blue-block {
@@ -170,6 +197,15 @@ button {
 /* ПОИСК ГОСТИННИЦ */
 .hotel-search {
   text-align: center;
+}
+
+.search {
+  width: 574px;
+  height: 60px;
+}
+
+.search a {
+  color: #ffffff;
 }
 
 /* ПОДПИСКА */
@@ -210,20 +246,6 @@ button {
   height: 60px;
   border-radius: 0px 10px 10px 0px;
   background-color: #82B3D3;
-}
-
-/* ПОДВАЛ */
-a {
-  text-decoration: none;
-}
-
-.phone {
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 40px;
-  color: #000000;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 /* ХЛЕБНЫЕ КРОШКИ */
@@ -272,15 +294,20 @@ input {
 }
 
 /* КАТАЛОГ ГОСТИНИЦ */
-.hotel-card-detail {
-  width: 140px;
-}
-
 .hotel-card-rating {
   width: 140px;
   height: 37px;
   background-color: #F2F2F2;
   text-align: center;
+}
+
+.hotel-card-about {
+  color: #ffffff;
+}
+
+.detail {
+  width: 140px;
+  height: 37px;
 }
 
 /* ПАГИНАЦИЯ */
@@ -310,4 +337,15 @@ select {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+}
+
+/* ПОДВАЛ */
+
+.phone {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
 }

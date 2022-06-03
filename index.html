@@ -31,21 +31,23 @@
         </ul>
 
         <!--МЕНЮ ПОЛЬЗОВАТЕЛЯ-->
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+        <ul class="user-list">
+          <li class="user-item">
+            <a class="user-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="user-item">
+            <a class="user-link" href="#">
               <span class="visually-hidden">Избранное содержит</span>
               <span>12</span>
               <span class="visually-hidden">гостиниц</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link button-link here" href="#">Хочу сюда!</a>
+          <li class="user-item">
+            <div class="button-link here">
+              <a class="user-link" href="#">Хочу сюда!</a>
+            </div>
           </li>
         </ul>
       </nav>
@@ -117,7 +119,9 @@
       <section class="hotel-search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="button-link search" href="catalog.html">Поиск гостиницы в Седоне</a>
+        <div class="button-link search">
+          <a href="catalog.html">Поиск гостиницы в Седоне</a>
+        </div>
       </section>
 
       <!--ФОРМА ПОДПИСКИ-->
@@ -154,9 +158,11 @@
       <a href="tel:88128121212">
         <span class="phone">+7 (812) 812-12-12</span>
       </a>
-      <a href="#">
-        <span class="visually-hidden">Сайт HTML Academy</span>
-      </a>
+      <div class="html-academy-logo">
+        <a href="#">
+          <img src="/images/HTML Academy logo.svg" width="114.9" height="32.9" alt="Логотип HTML Academy">
+        </a>
+      </div>
     </footer>
   </body>
 </html>
