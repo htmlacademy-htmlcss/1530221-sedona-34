@@ -1,4 +1,6 @@
 
+/* ШРИФТЫ */
+
 /* PT Sans */
 @font-face {
   font-family: "PT Sans";
@@ -97,7 +99,7 @@ button {
   border: none;
 }
 
-.hotel-card-favorites {
+.button-favorite {
   width: 140px;
   height: 37px;
 }
@@ -127,12 +129,15 @@ button {
 }
 
 /* НАВИГАЦИЯ */
-.navigation-link {
+.navigation {
   font-weight: 700;
+  text-transform: capitalize;
+}
+
+.navigation-link {
   font-size: 20px;
   line-height: 26px;
   color: #000000;
-  text-transform: capitalize;
 }
 
 .current-site-page {
@@ -141,12 +146,9 @@ button {
 
 /* МЕНЮ ПОЛЬЗОВАТЕЛЯ */
 .user-link {
-  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-  text-transform: capitalize;
-  text-decoration: none;
 }
 
 .here {
