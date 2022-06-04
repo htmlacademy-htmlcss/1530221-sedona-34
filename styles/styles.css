@@ -28,6 +28,10 @@ body {
   background-color: #ffffff;
 }
 
+.main-index {
+  text-align: center;
+}
+
 h1 {
   font-weight: 700;
   font-size: 60px;
@@ -58,11 +62,6 @@ a {
   text-decoration: none;
 }
 
-ol {
-  font-size: 18px;
-  line-height: 21px;
-}
-
 /* СКРЫТЫЕ ЭЛЕМЕНТЫ
 .visually-hidden {
   position: absolute;
@@ -85,13 +84,17 @@ button {
   color: #ffffff;
   text-transform: uppercase;
   background-color: #82B3D3;
+  /*
   border: 1px solid #82B3D3;
   border-radius: 4px;
+  */
 }
 
 .button-submit {
+  /*
   width: 160px;
   height: 48px;
+  */
 }
 
 .button-reset {
@@ -100,8 +103,10 @@ button {
 }
 
 .button-favorite {
+  /*
   width: 140px;
   height: 37px;
+  */
 }
 
 .add {
@@ -152,8 +157,10 @@ button {
 }
 
 .here {
+  /*
   width: 160px;
   height: 37px;
+  */
 }
 
 /* ПРОМО */
@@ -161,14 +168,10 @@ button {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  text-align: center;
   text-transform: uppercase;
 }
 
 /* ПРЕИМУЩЕСТВА */
-.advantages {
-  text-align: center;
-}
 
 .blue-block {
   color: #ffffff;
@@ -197,13 +200,12 @@ button {
 }
 
 /* ПОИСК ГОСТИННИЦ */
-.hotel-search {
-  text-align: center;
-}
 
 .search {
+  /*
   width: 574px;
   height: 60px;
+  */
 }
 
 .search a {
@@ -215,8 +217,10 @@ button {
   color: #ffffff;
   text-align: center;
 
+  /*
   width: 1200px;
   height: 411px;
+  */
   background: #82B3D3 url("/images/background-subscription.jpeg") no-repeat;
 }
 
@@ -230,9 +234,11 @@ button {
   line-height: 21px;
   color: #000000;
 
+  /*
   width: 600px;
   height: 60px;
   border-radius: 10px 0px 0px 10px;
+  */
   background-color: #F2F2F2;
 }
 
@@ -244,9 +250,11 @@ button {
   text-align: center;
   text-transform: uppercase;
 
+  /*
   width: 200px;
   height: 60px;
   border-radius: 0px 10px 10px 0px;
+  */
   background-color: #82B3D3;
 }
 
@@ -297,8 +305,10 @@ input {
 
 /* КАТАЛОГ ГОСТИНИЦ */
 .hotel-card-rating {
+  /*
   width: 140px;
   height: 37px;
+  */
   background-color: #F2F2F2;
   text-align: center;
 }
@@ -308,18 +318,23 @@ input {
 }
 
 .detail {
+  /*
   width: 140px;
   height: 37px;
+  */
 }
 
 /* ПАГИНАЦИЯ */
 .pagination-item {
-  width: 60px;
-  height: 60px;
   text-align: center;
   background-color: #82B3D3;
+
+  /*
+  width: 60px;
+  height: 60px;
   border-radius: 4px;
   border: 1px solid #82B3D3;
+  */
 }
 
 .pagination-item a {
