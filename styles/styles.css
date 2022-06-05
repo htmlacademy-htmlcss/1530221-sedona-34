@@ -217,15 +217,18 @@ button {
 
 /* ПОДПИСКА */
 .subscription-form {
-  color: #ffffff;
   text-align: center;
 
 /* width: 1200px;
   height: 411px; */
+}
+
+.subscription-index {
+  color: #ffffff;
   background: #82B3D3 url("/images/background-subscription.jpeg") no-repeat;
 }
 
-.subscription-form p {
+.subscription-index p {
   color: #ffffff;
 }
 
