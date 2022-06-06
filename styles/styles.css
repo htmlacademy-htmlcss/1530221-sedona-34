@@ -110,6 +110,14 @@ body {
   line-height: 36px;
 }
 
+/* СЕЛЕКТЫ */
+.label-amount, .select-control-amount, .select-control-sorting {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
 /* МЕНЮ НАВИГАЦИИ */
 .navigation {
   font-weight: 700;
@@ -143,6 +151,11 @@ body {
   text-transform: uppercase;
 }
 
+.promo-image {
+  background: #82B3D3 url("../images/background-promo.jpeg") no-repeat;
+  background-size: 100% auto;
+}
+
 /* БЛОК ПРЕИМУЩЕСТВ */
 .advantages-main-list {
   font-weight: 400;
@@ -150,14 +163,14 @@ body {
   line-height: 21px;
 }
 
-.blue-block {
-  color: #ffffff;
-  background-color: #82B3D3;
-}
-
 .advantages-sub-list {
   color: #000000;
   background-color: #ffffff;
+}
+
+.blue-block {
+  color: #ffffff;
+  background-color: #82B3D3;
 }
 
 .white-blue-block {
@@ -175,7 +188,8 @@ body {
 
 .subscription-index {
   color: #ffffff;
-  background: #82B3D3 url("/images/background-subscription.jpeg") no-repeat;
+  background: #82B3D3 url("../images/background-subscription.jpeg") no-repeat;
+  background-size: 100% auto;
 }
 
 .subscription-input {
@@ -194,7 +208,8 @@ body {
 .head-inner-container {
   color: #ffffff;
   text-transform: capitalize;
-  background: #82B3D3 url("/images/background-catalog.jpeg") no-repeat;
+  background: #82B3D3 url("../images/background-catalog.jpeg") no-repeat;
+  background-size: 100% auto;
 }
 
 .catalog-filter-title {
@@ -218,13 +233,6 @@ body {
   color: #000000;
 }
 
-/* .select-control-sorting {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  color: #333333;
-} */
-
 /* КАТАЛОГ ГОСТИНИЦ */
 .hotel-card-rating {
   background-color: #F2F2F2;
@@ -247,13 +255,6 @@ body {
 .current-catalog-page {
   background-color: #F2F2F2;
 }
-
-/* .select-control-amount {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  color: #ff0000;
-} */
 
 /* ПОДВАЛ */
 .phone {
