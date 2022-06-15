@@ -85,86 +85,6 @@ body {
   text-transform: capitalize;
 }
 
-/* КНОПКИ */
-.button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-
-  color: #ffffff;
-  background-color: #82B3D3;
-}
-
-.reset {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  border: none;
-
-  color: #ffffff;
-  background-color: transparent;
-}
-
-.add {
-  background-color: #7DB54F;
-}
-
-.subscribe {
-  font-size: 20px;
-  line-height: 36px;
-}
-
-/* КНОПКИ-ССЫЛКИ */
-.button-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  color: #ffffff;
-  background-color: #756157;
-}
-
-.here {
-  display: block;
-  width: 160px;
-  box-sizing: border-box;
-  text-align: center;
-  padding: 9px 15px 8px 15px;
-  margin: 0;
-  margin-right: 70px;
-  border-radius: 4px;
-
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.search {
-  display: block;
-  width: 544px;
-  font-size: 20px;
-  line-height: 36px;
-  padding: 12px 15px;
-  margin: 0;
-}
-
-/* СЕЛЕКТЫ */
-.label-amount,
-.select-control-amount,
-.hotel-sorting-select {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-
-  color: #333333;
-}
-
 /* МЕНЮ НАВИГАЦИИ */
 .navigation {
   display: flex;
@@ -229,7 +149,7 @@ body {
 .user-link {
   display: block;
   margin: 0 auto;
-  margin-right: 20px;
+  margin-right: 5px;
   padding: 0;
   min-width: 36px;
   min-height: 36px;
@@ -406,6 +326,80 @@ body {
   background-color: #F2F2F2;
 }
 
+/* ПОДВАЛ */
+.page-footer {
+  width: 1200px;
+  margin: 0 auto;
+}
+.page-footer-container {
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+  margin: 0 auto;
+}
+
+.footer-social {
+  margin: 0;
+  padding: 0;
+  margin-right: 42px;
+  width: 200px;
+}
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-left: 70px;
+  list-style-type: none;
+}
+
+.social-link {
+  display: block;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  margin: 45px 5px 35px 0;
+  outline: #000000 1px solid;
+}
+
+.footer-phone {
+  padding: 0;
+  margin: 0;
+  margin-right: 42px;
+  width: 720px;
+  text-align: center;
+}
+
+.phone {
+  display: block;
+  margin: 45px 0 35px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #000000;
+}
+
+.footer-htmlacademy-logo {
+  width: 115px;
+  margin: 0;
+  margin-right: 70px;
+  padding: 0;
+}
+
+.htmlacademy-logo {
+  display: block;
+  width: 100%;
+  margin: 45px 0 35px;
+
+}
+
 /* ХЕДЕР КАТАЛОГА */
 .header-container {
   margin-left: 70px;
@@ -423,6 +417,8 @@ body {
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
+  justify-content: center;
+  min-height: 403px;
 
   color: #ffffff;
   background: #82B3D3 url("../images/background-catalog.jpeg") no-repeat;
@@ -487,19 +483,14 @@ body {
 /* СОРТИРОВКА КАТАЛОГА ГОСТИНИЦ */
 .hotel-sorting {
   display: flex;
-  margin: o auto;
+  align-items: center;
+  margin: 0 auto;
   padding: 0;
 }
 
-.hotel-sorting-result {
-  margin-right: 191px;
-}
-
-.hotel-sorting-select {
-  margin-right: 78px;
-}
-
 .search-result {
+  margin: 58px 191px 61px 72px;
+  padding: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -509,6 +500,9 @@ body {
 }
 
 .view-control-list {
+  display: flex;
+  margin: 0 71px 0 78px;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -539,6 +533,7 @@ body {
 /* ПАГИНАЦИЯ */
 .pagination-amount-container {
   display: flex;
+  align-items: center;
   margin: 0 auto;
   padding: 0;
   justify-content: space-between;
@@ -546,12 +541,11 @@ body {
 
 .pagination {
   display: flex;
+  align-items: center;
   list-style-type: none;
 }
 
 .pagination-item {
-  width: 60px;
-  height: 60px;
   margin-right: 8px;
   text-align: center;
   border-radius: 4px;
@@ -560,9 +554,14 @@ body {
 }
 
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+  text-decoration: none;
 
   color: #ffffff;
 }
@@ -571,40 +570,92 @@ body {
   background-color: #F2F2F2;
 }
 
-/* ПОДВАЛ */
-.page-footer-container {
-  display: flex;
-  width: 1200px;
-  margin: 0 auto;
+/* КНОПКИ */
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  background-color: #82B3D3;
 }
 
-.footer-social {
-  width: 142px;
-  margin-right: 42px;
-}
-
-.footer-phone {
-  width: 720px;
-  margin: auto;
-  text-align: center;
-}
-
-.footer-htmlacademy-logo {
-  width: 115px;
-}
-
-.social-list {
-  display: flex;
-  list-style-type: none;
-}
-
-.phone {
+.reset {
   font-weight: 400;
-  font-size: 40px;
-  line-height: 40px;
-  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.add {
+  background-color: #7DB54F;
+}
+
+.subscribe {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.button-view {
+  display: block;
+  min-width: 36px;
+  min-height: 36px;
+  margin: 0;
+  margin-right: 5px;
+  padding: 0;
+  outline: #000000 1px solid;
+}
+
+/* КНОПКИ-ССЫЛКИ */
+.button-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
 
-  color: #000000;
+  color: #ffffff;
+  background-color: #756157;
+}
+
+.here {
+  display: block;
+  width: 160px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 9px 15px 8px 15px;
+  margin: 0;
+  margin-right: 70px;
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.search {
+  display: block;
+  width: 544px;
+  font-size: 20px;
+  line-height: 36px;
+  padding: 12px 15px;
+  margin: 0;
+}
+
+/* СЕЛЕКТЫ */
+.label-amount,
+.select-control-amount,
+.hotel-sorting-select {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #333333;
 }
