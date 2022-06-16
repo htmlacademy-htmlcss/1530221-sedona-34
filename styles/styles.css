@@ -62,26 +62,31 @@ body {
 }
 
 /* ЗАГАЛОВКИ */
-.heading {
+
+.heading-small {
   margin: 0;
   padding: 0;
+  font-size: 24px;
+  line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.header-small {
-  font-size: 24px;
-  line-height: 28px;
-}
-
-.header-normal {
+.heading-normal {
+  margin: 0;
+  padding: 0;
   font-size: 30px;
   line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.header-big {
+.heading-big {
+  margin: 0;
+  padding: 0;
   font-size: 60px;
   line-height: 78px;
+  font-weight: 700;
   text-transform: capitalize;
 }
 
@@ -269,6 +274,10 @@ body {
 }
 
 /* БЛОК ПОИСКА ГОСТИННИЦ */
+.hotel-search-title {
+  margin-bottom: 29px;
+}
+
 .hotel-search {
   display: flex;
   flex-direction: column;
@@ -299,6 +308,16 @@ body {
   background-size: 100% auto;
 }
 
+.subscription-title {
+  margin-bottom: 29px;
+}
+
+.subscription-description {
+  margin: 0;
+  margin-bottom: 46px;
+  padding: 0;
+}
+
 .subscription-input {
   font-weight: 400;
   font-size: 18px;
@@ -308,50 +327,38 @@ body {
 
 /* ПОДВАЛ */
 
-.page-footer-container {
+.page-footer {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   min-height: 120px;
   margin: 0 auto;
 }
 
-.footer-social {
-  width: 200px;
-  margin: 0;
-  padding: 0;
-  margin-right: 42px;
-}
-
-.social-list {
+.footer-social-list {
   display: flex;
   flex-wrap: wrap;
+  width: 220px;
+  margin: 45px 0 35px 70px;
   padding: 0;
-  margin: 0;
-  margin-left: 70px;
   list-style-type: none;
 }
 
-.social-link {
+.footer-social-link {
   display: block;
   min-width: 36px;
   min-height: 36px;
-  margin: 45px 5px 35px 0;
+  margin-right: 5px;
   padding: 0;
   outline: #000000 1px solid;
 }
 
 .footer-phone {
-  width: 720px;
-  margin: 0;
-  margin-right: 42px;
-  padding: 0;
-  text-align: center;
+  margin: 45px 0 35px 0;
 }
 
 .phone {
   display: block;
-  margin: 45px 0 35px;
-  padding: 0;
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
@@ -362,27 +369,19 @@ body {
 }
 
 .footer-htmlacademy-logo {
-  width: 115px;
-  margin: 0;
-  margin-right: 70px;
-  padding: 0;
+  margin: 45px 70px 35px 0;
 }
 
 .htmlacademy-logo {
   display: block;
   width: 100%;
-  margin: 45px 0 35px;
-
-}
-
-/* ХЕДЕР КАТАЛОГА */
-.header-container {
-  margin-left: 70px;
 }
 
 /* ХЛЕБНЫЕ КРОШКИ */
 .breadcrumps {
   display: flex;
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   list-style-type: none;
 }
@@ -451,15 +450,18 @@ body {
 }
 
 /* СОРТИРОВКА КАТАЛОГА ГОСТИНИЦ */
-.hotel-sorting {
+.sorting-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  min-height: 50px;
+  margin: 50px 72px 56px 72px;
   padding: 0;
 }
 
 .search-result {
-  margin: 58px 191px 61px 72px;
+  margin: 0;
+  margin-right: 191px;
   padding: 0;
   font-size: 30px;
   line-height: 36px;
@@ -470,7 +472,8 @@ body {
 
 .view-control-list {
   display: flex;
-  margin: 0 71px 0 78px;
+  margin: 0;
+  margin-left: 78px;
   padding: 0;
   list-style-type: none;
 }
@@ -484,7 +487,7 @@ body {
 .hotel-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0 72px 0 72px;
   padding: 0;
   list-style-type: none;
 }
@@ -492,11 +495,15 @@ body {
 .hotel-card {
   width: 340px;
   margin-right: 18px;
+  padding: 0;
 }
 
-.hotel-card:first-child,
-.hotel-card:last-child {
-  margin-left: 73px;
+.hotel-card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.hotel-card-content {
+  margin: 20px 20px;
 }
 
 /* ПАГИНАЦИЯ */
@@ -504,13 +511,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin: 30px 72px 25px 72px;
   padding: 0;
 }
 
 .pagination {
   display: flex;
   align-items: center;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -523,7 +532,6 @@ body {
 
 .pagination-link {
   display: block;
-  box-sizing: border-box;
   width: 60px;
   height: 60px;
   font-size: 20px;
@@ -531,6 +539,10 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: #ffffff;
+}
+
+.label-amount {
+  margin-right: 51px;
 }
 
 .current-catalog-page {
