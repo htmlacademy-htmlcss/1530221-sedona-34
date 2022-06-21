@@ -60,12 +60,12 @@
       <div class="page-container">
         <div class="head-inner-container">
           <header class="main-inner-header">
-            <h1 class="heading-big">Гостиницы Седоны</h1>
+            <h1 class="main-inner-title heading-big">Гостиницы Седоны</h1>
 
             <!--ХЛЕБНЫЕ КРОШКИ-->
             <ol class="breadcrumps">
               <li class="braedcrumps-item">
-                <a class="breadcrumps-link" href="index.html">
+                <a class="breadcrumps-link house-link" href="index.html">
                   <span class="visually-hidden">Главная</span>
                 </a>
               </li>
@@ -76,7 +76,7 @@
           </header>
 
           <!--ФИЛЬТРАЦИЯ-->
-          <section class="hotel-filter-sorting">
+          <section class="hotel-filter">
             <h2 class="visually-hidden">Фильтрация каталога гостиниц</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <div class="filter-left">
@@ -130,10 +130,12 @@
               <div class="filter-right">
                 <fieldset class="catalog-filter-group group-price">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                  <label for="control-input-price-from" class="visually-hidden">Стоимость от</label>
-                  <input type="number" name="price-from" id="control-input-price-from" min="0" placeholder="0 от">
-                  <label for="control-input-price-to" class="visually-hidden">Стоимость до</label>
-                  <input type="number" name="price-to" id="control-input-price-to" max="9000" placeholder="9000 до">
+                  <div class="price-form">
+                    <label for="control-input-price-from" class="visually-hidden">Стоимость от</label>
+                    <input class="input-price price-from" type="number" name="price-from" id="control-input-price-from" min="0" placeholder="0 от">
+                    <label for="control-input-price-to" class="visually-hidden">Стоимость до</label>
+                    <input class="input-price price-to" type="number" name="price-to" id="control-input-price-to" max="9000" placeholder="9000 до">
+                  </div>
                   <p class="slider">
                     <span class="slider-price-from visually-hidden">Cтоимость от</span>
                     <span class="slider-price-to visually-hidden">Cтоимость до</span>
@@ -153,10 +155,9 @@
           <div class="sorting-container">
             <h2 class="visually-hidden">Сортировка каталога гостиниц</h2>
             <p class="search-result">Найдено гостиниц: 38</p>
-            <select class="hotel-sorting-select" aria-label="Сортировка">
+            <select class="select-control sort-by-price" aria-label="Сортировка">
               <option value="cheap">Сначала дешёвые</option>
               <option value="expensive">Сначала дорогие</option>
-              <option value="rating">По количеству звёзд</option>
             </select>
             <ul class="view-control-list">
               <li class="view-control-item">
@@ -265,8 +266,8 @@
 
             <!--КОЛИЧЕСТВО КАРТОЧЕК НА СТРАНИЦЕ КАТАЛОГА-->
             <form class="control-amount">
-              <label class="label-amount" for="control-amount-card">Гостиниц на странице:</label>
-              <select class="select-control-amount" id="control-amount-card" aria-label="Количество карточек на странице">
+              <label class="label-amount-cards" for="control-amount-cards">Гостиниц на странице:</label>
+              <select class="select-control amount-cards" id="control-amount-cards" aria-label="Количество карточек на странице">
                 <option value="4">4</option>
                 <option value="8">8</option>
                 <option value="16">16</option>
