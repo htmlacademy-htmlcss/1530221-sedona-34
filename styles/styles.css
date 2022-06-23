@@ -95,9 +95,9 @@ body {
 }
 
 .navigation-logo {
-  position: absolute;
-  width: 139px;
+  position: relative;
   margin-left: 70px;
+  margin-right: 30px;
   margin-bottom: -5px;
 }
 
@@ -113,12 +113,12 @@ body {
   align-items: center;
   width: 450px;
   margin: 0;
-  margin-left: 239px;
   padding: 0;
   list-style-type: none;
 }
 
 .navigation-link {
+  position: relative;
   display: block;
   padding: 20px 17px;
   font-size: 20px;
@@ -133,8 +133,13 @@ body {
   margin-right: 0;
 }
 
-.current-site-page {
-  text-decoration: underline;
+.current-site-page::before {
+  position: absolute;
+  top: 65px;
+  right: 17px;
+  left: 17px;
+  border-bottom: 2px solid #756257;
+  content: "";
 }
 
 /* МЕНЮ ПОЛЬЗОВАТЕЛЯ */
@@ -151,15 +156,46 @@ body {
 
 .user-link {
   display: block;
-  min-width: 36px;
-  min-height: 36px;
+  min-width: 42px;
+  min-height: 66px;
   margin: 0;
-  margin-right: 5px;
   padding: 0;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-  outline: #000000 1px solid;
+}
+
+.user-item:nth-child(1) {
+  background-image: url('../images/icon/icon-search.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.user-item:nth-child(2) {
+  position: relative;
+  background-image: url('../images/icon/icon-favorite.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px;
+}
+
+.user-item:nth-child(2)::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  left: 24px;
+  content: "12";
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  border-radius: 50%;;
 }
 
 /* БЛОК ПРОМО */
@@ -222,6 +258,13 @@ body {
   list-style-type: none;
 }
 
+.advantages-sub-item:nth-child(1) {
+  background-image: url("../images/icon/icon-housing.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+
 .advantages-main-item,
 .advantages-sub-item {
   display: flex;
@@ -251,8 +294,7 @@ body {
   align-self: center;
 }
 
-.advantages h3,
-.advantages h4,
+.advantages .heading-small,
 .advantages-number {
   margin: 0 85px 30px 85px;
 }
@@ -560,7 +602,8 @@ body {
 .hotel-card-content {
   display: grid;
   grid-template-columns: 140px 140px;
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 16px;
   margin: 20px 20px;
 }
 
@@ -624,6 +667,7 @@ body {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
