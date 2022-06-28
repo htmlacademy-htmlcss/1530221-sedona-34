@@ -22,9 +22,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
@@ -32,6 +29,14 @@ body {
   font-weight: 400;
   color: #000000;
   background-color: #ffffff;
+}
+
+page-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 1200px;
+  min-height: 100%;
 }
 
 /* СТРАНИЦЫ */
@@ -207,21 +212,30 @@ body {
 }
 
 .promo-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  min-height: 485px;
-  margin-bottom: 63px;
+  position: relative;
+  z-index: -1;
+  margin-bottom: 63px;;
   background: #82B3D3 url("../images/background-promo.jpeg") no-repeat;
   background-size: 100% auto;
+  min-height: 485px;
+}
+
+.promo-image-container::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/promo-decor.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .promo-image {
-  margin-bottom: 83px;
+  margin-top: 51px;
 }
 
 .promo-text {
-  margin: 0;
   margin-bottom: 31px;
   padding: 0;
 }
@@ -800,12 +814,23 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.current-catalog-page,
-.current-catalog-page:hover,
-.current-catalog-page:focus,
-.current-catalog-page:active {
+.pagination-current,
+.pagination-current:hover,
+.pagination-current:focus,
+.pagination-current:active {
   color: #000000;
   background-color: #F2F2F2;;
+  border-radius: 4px;
+}
+
+.pagination-ellipsis,
+.pagination-ellipsis:hover,
+.pagination-ellipsis:focus,
+.pagination-ellipsis:active {
+  color: #ffffff;
+  background-color: #82B3D3;
+  border-radius: 4px;
+
 }
 
 .label-amount {
@@ -884,6 +909,10 @@ body {
 
 .button-view:focus {
   border: 2px solid #68A2CA;
+}
+
+.view-current {
+  border: 2px solid #000000;
 }
 
 /* КНОПКИ-ССЫЛКИ */
