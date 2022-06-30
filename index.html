@@ -139,7 +139,7 @@
       <section class="hotel-search">
         <h2 class="hotel-search-title heading-normal">Заинтересовались?</h2>
         <p class="hotel-search-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="button-link search" href="catalog.html">Поиск гостиницы в Седоне</a>
+        <a class="button-link search" href="#">Поиск гостиницы в Седоне</a>
       </section>
 
       <!--ФОРМА ПОДПИСКИ-->
@@ -190,6 +190,80 @@
         </svg>
       </a>
     </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-search">
+        <button class="modal-close">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="date-from-wrapper">
+            <label class="label-date-from" for="modal-date-from">Дата заезда:</label>
+            <input class="input-date-from" type="text" id="modal-date-from" name="modal-date-from" placeholder="27 апреля 2020">
+          </div>
+          <span class="comment-wrapper">
+            <span class="visually-hidden">Замечание</span>
+            <span class="date-from-comment">Мы не можем отправить вас в прошлое.</span>
+          </span>
+          <div class="date-to-wrapper">
+            <label class="label-date-to" for="modal-date-to">Дата выезда:</label>
+            <input class="input-date-to" type="text" id="modal-date-to" name="modal-date-to" placeholder="1 сентября 2021">
+          </div>
+          <span class="comment-wrapper">
+            <span class="visually-hidden">Замечание</span>
+            <span class="date-to-comment">На эти даты есть свободные номера. Пока есть.</span>
+          </span>
+          <div class="modal-amount-wrapper">
+            <div class="adult-amount">
+              <label class="label-adult-amount" for="modal-adult-amount">Взрослые:</label>
+              <div class="adult-input-wrapper">
+                <input class="input-adult-amount" type="number" id="modal-adult-amount" name="modal-adult-amount" placeholder="2">
+                <button class="button-amount amount-less">
+                  <span class="visually-hidden">Меньше</span>
+                  <svg class="icon-minus" aria-hidden="true" focusable="false" width="13" height="1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v1h13V0H0Z" fill="#000"/>
+                  </svg>
+                </button>
+                <button class="button-amount amount-more">
+                  <span class="visually-hidden">Больше</span>
+                  <svg class="icon-plus"  aria-hidden="true" focusable="false" width="13" height="13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="child-amount">
+              <span class="child-label-wrapper">
+                <label class="label-child-amount" for="modal-child-amount">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+              <div class="child-input-wrapper">
+                <input class="input-child-amount" type="number" id="modal-child-amount" name="modal-child-amount" placeholder="1">
+                <button class="button-amount amount-less">
+                  <span class="visually-hidden">Меньше</span>
+                  <svg class="icon-minus" aria-hidden="true" focusable="false" width="13" height="1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v1h13V0H0Z" fill="#000"/>
+                  </svg>
+                </button>
+                <button class="button-amount amount-more">
+                  <span class="visually-hidden">Больше</span>
+                  <svg class="icon-plus"  aria-hidden="true" focusable="false" width="13" height="13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button class="modal-button" type="submit">Найти</button>
+        </form>
+      </div>
+
+    </div>
   </body>
 
 </html>
