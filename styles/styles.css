@@ -476,9 +476,9 @@ page-container {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
 
 .modal {
   position: relative;
@@ -821,7 +821,7 @@ page-container {
   padding: 15px 18px 18px 22px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 21px;
   color: #ffffff;
   text-transform: none;
   background-color: #333333;
@@ -939,7 +939,7 @@ page-container {
 
 .catalog-filter-title {
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -978,12 +978,31 @@ page-container {
   margin-right: 70px;
 }
 
+.price-form {
+  display: flex;
+}
+
 .input-price {
-  width: 143px;
-  height: 48px;
-  font-family: "PT Sans", sans-serif;
+  width: 108px;
+  height: 42px;
+  padding-left: 19px;
+  padding-right: 14px;
   background-color: transparent;
   border: 2px solid #FFFFFF;
+}
+
+.input-price::-webkit-outer-spin-button,
+.input-price::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.input-price::placeholder {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
 }
 
 .price-to {
@@ -995,10 +1014,6 @@ page-container {
   border-radius: 4px 0 0 4px;
 }
 
-.price-form {
-  display: flex;
-}
-
 .group-buttons {
   display: flex;
   flex-direction: column;
@@ -1007,11 +1022,25 @@ page-container {
 }
 
 .submit {
+  width: 160px;
+  min-height: 48px;
   margin-top: 60px;
   margin-bottom: 20px;
   padding: 14px 35px;
   border: none;
   border-radius: 4px;
+}
+
+.reset {
+  padding: 0;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* СОРТИРОВКА КАТАЛОГА ГОСТИНИЦ */
@@ -1042,7 +1071,7 @@ page-container {
   list-style-type: none;
 }
 
-.view-control-item {
+.view-control-item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -1246,18 +1275,6 @@ page-container {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.reset {
-  padding: 0;
-  font-family: "PT Sans", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #ffffff;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 .add {
   background-color: #7DB54F;
 }
@@ -1281,8 +1298,8 @@ page-container {
 
 .button-view {
   display: block;
-  min-width: 48px;
-  min-height: 48px;
+  min-width: 44px;
+  min-height: 44px;
   margin: 0;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1349,6 +1366,20 @@ page-container {
   font-weight: 400;
 }
 
+.sort-by-price {
+  position: relative;
+  width: 290px;
+  min-height: 49px;
+  margin-right: 78px;
+  padding-left: 20px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  appearance: none;
+  background-image: url('../images/select-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
 .label-amount-cards {
   margin-right: 51px;
   font-size: 18px;
@@ -1356,18 +1387,15 @@ page-container {
   font-weight: 400;
 }
 
-.sort-by-price {
-  box-sizing: border-box;
-  width: 290px;
-  height: 49px;
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-}
-
 .amount-cards {
-  box-sizing: border-box;
+  position: relative;
   width: 160px;
-  height: 49px;
+  min-height: 49px;
+  padding-left: 20px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  appearance: none;
+  background-image: url('../images/select-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 20px center;
 }
