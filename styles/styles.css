@@ -51,6 +51,27 @@ page-container {
   text-align: center;
 }
 
+/* ОБЩИЕ СТИЛИ ДЛЯ КНОПОК */
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #82B3D3;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #68A2CA;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* СКРЫТЫЕ ЭЛЕМЕНТЫ */
 .visually-hidden {
   position: absolute;
@@ -191,7 +212,6 @@ page-container {
   top: 15px;
   left: 24px;
   content: "12";
-  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 10px;
   line-height: 13px;
@@ -324,6 +344,19 @@ page-container {
   margin-bottom: 90px;
 }
 
+.advantages-title {
+  margin-bottom: 30px;
+}
+
+.advantages-number {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.advantages-description {
+  margin: 0;
+}
+
 .blue-block-image-start {
   order: -1;
 }
@@ -383,14 +416,24 @@ page-container {
 }
 
 .subscription-input {
-  padding: 20px 491px 19px 22px;
-  font-family: "PT Sans", sans-serif;
+  width: 580px;
+  min-height: 58px;
+  padding-left: 20px;
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   background-color: #F2F2F2;
   border: none;
   border-radius: 10px 0 0 10px;
+}
+
+.subscribe {
+  width: 200px;
+  font-size: 20px;
+  line-height: 36px;
+  border: none;
+  border-radius: 0 10px 10px 0;
 }
 
 /* ПОДВАЛ */
@@ -928,6 +971,8 @@ page-container {
 }
 
 .catalog-filter-group {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
@@ -958,18 +1003,50 @@ page-container {
 }
 
 .group-infrastructure {
-  padding: 0;
-  margin: 0;
   margin-right: 70px;
 }
 
-.group-type-house {
-  padding: 0;
-  margin: 0;
+.control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.control {
+  position: relative;
 }
 
 .control-input {
   margin: 0 19px 15px 0;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-image: url('../images/icon/icon-checked.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  content: "";
+  background-color: #3F5E72;
+  border-radius: 50%;
 }
 
 .group-price {
@@ -980,6 +1057,7 @@ page-container {
 
 .price-form {
   display: flex;
+  margin-bottom: 32px;
 }
 
 .input-price {
@@ -1005,8 +1083,9 @@ page-container {
   color: #FFFFFF;
 }
 
-.price-to {
-  border-radius: 0 4px 4px 0;
+.price-from-wrapper,
+.price-to-wrapper {
+  position: relative;
 }
 
 .price-from {
@@ -1014,9 +1093,79 @@ page-container {
   border-radius: 4px 0 0 4px;
 }
 
+.price-from-description::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  content: "От";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.price-to {
+  border-radius: 0 4px 4px 0;
+}
+
+.price-to-description::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  content: "До";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  left: 0;
+  width: 228px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 5px;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
 .group-buttons {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
 }
@@ -1255,26 +1404,6 @@ page-container {
 }
 
 /* КНОПКИ */
-.button {
-  font-family: "PT Sans", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #82B3D3;
-  cursor: pointer;
-}
-
-.button:hover,
-.button:focus {
-  background-color: #68A2CA;
-}
-
-.button:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
 .add {
   background-color: #7DB54F;
 }
@@ -1286,14 +1415,6 @@ page-container {
 
 .add:active {
   color: rgba(255, 255, 255, 0.3);
-}
-
-.subscribe {
-  padding: 12px 15px;
-  font-size: 20px;
-  line-height: 36px;
-  border: none;
-  border-radius: 0 10px 10px 0;
 }
 
 .button-view {
@@ -1360,7 +1481,7 @@ page-container {
 
 /* СЕЛЕКТЫ */
 .select-control {
-  font-family: "PT Sans", sans-serif;
+  font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
