@@ -5,7 +5,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -13,14 +13,12 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
 html {
   height: 100%;
-/* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
 }
 
 body {
@@ -45,8 +43,7 @@ body {
 
 /* СТРАНИЦЫ */
 .page-header,
-.main-container,
-.page-footer {
+.main-container {
   width: 1200px;
   margin: 0 auto;
 }
@@ -147,6 +144,7 @@ body {
 
 /* МЕНЮ НАВИГАЦИИ */
 .navigation {
+  position: relative;
   display: flex;
   margin: 0;
 }
@@ -178,7 +176,7 @@ body {
 .navigation-link {
   position: relative;
   display: block;
-  padding: 21px 17px 18px;
+  padding: 20px 17px 19px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -257,7 +255,7 @@ body {
   display: block;
   box-sizing: border-box;
   width: 160px;
-  padding: 10px 15px 7px 15px;
+  padding: 9px 15px 8px 15px;
   margin: 0;
   margin-right: 70px;
   font-size: 16px;
@@ -278,7 +276,7 @@ body {
 
 .promo-image-container {
   position: relative;
-  margin-bottom: 65px;
+  margin-bottom: 63px;
   background: #82B3D3 url("../images/background-promo.jpeg") no-repeat;
   background-size: 100% auto;
   min-height: 485px;
@@ -301,7 +299,7 @@ body {
 
 .promo-text {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   padding: 0;
 }
 
@@ -315,7 +313,7 @@ body {
 
 .advantages-text {
   margin: 0;
-  margin-bottom: 89px;
+  margin-bottom: 90px;
   color: #333333;
 }
 
@@ -349,7 +347,7 @@ body {
 .advantage-container-sub {
   width: 230px;
   min-height: 223px;
-  margin: 80px 85px;
+  margin: 80px 85px 81px 85px;
 }
 
 .advantage-container {
@@ -359,7 +357,7 @@ body {
 }
 
 .advantage-container-sub .heading-small {
-  padding-top: 104px;
+  padding-top: 102px;
 }
 
 .icon-housing {
@@ -403,6 +401,10 @@ body {
   margin: 0;
 }
 
+.advantage-container-sub .advantages-description {
+  color: #333333;
+}
+
 .blue-block-image-start {
   order: -1;
 }
@@ -423,12 +425,12 @@ body {
 }
 
 .hotel-search-title {
-  margin: 92px 0 29px 0;
+  margin: 91px 0 29px 0;
 }
 
 .hotel-search-text {
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 56px;
   padding: 0;
   color: #333333;
 }
@@ -457,12 +459,12 @@ body {
 }
 
 .subscription-title {
-  margin: 96px 0 28px 0;
+  margin: 94px 0 29px 0;
 }
 
 .subscription-description {
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 46px;
   padding: 0;
 }
 
@@ -473,8 +475,9 @@ body {
 
 .subscription-input {
   width: 578px;
-  min-height: 57px;
-  padding: 0 3px 0 22px;
+  min-height: 60px;
+  padding: 0;
+  padding-left: 22px;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -495,16 +498,17 @@ body {
 /* ПОДВАЛ */
 .page-footer {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
-  min-height: 120px;
+  min-height: 50px;
+  padding: 40px 70px 30px 70px;
 }
 
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
-  width: 150px;
-  margin: 45px 229px 35px 70px;
+  min-width: 142px;
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
@@ -541,7 +545,7 @@ body {
 
 .phone {
   display: block;
-  margin: 47px 235px 33px 0;
+  padding-top: 1px;
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
@@ -552,7 +556,7 @@ body {
 }
 
 .footer-htmlacademy-link {
-  margin: 47px 70px 33px 0;
+  padding-top: 6px;
 }
 
 .footer-htmlacademy-link:hover,
@@ -583,7 +587,7 @@ body {
   position: relative;
   width: 575px;
   margin: auto;
-  padding: 70px;
+  padding: 62px 70px 70px;
   background-color: #ffffff;
   border-radius: 30px;
 }
@@ -591,7 +595,7 @@ body {
 .modal-close {
   position: absolute;
   padding: 0;
-  top: 60px;
+  top: 55px;
   right: 70px;
   width: 53px;
   height: 53px;
@@ -626,6 +630,7 @@ body {
 
 .modal-title {
   margin: 0;
+  /* padding-left: 1px; */
   margin-bottom: 63px;
   font-weight: 700;
   font-size: 30px;
@@ -964,7 +969,7 @@ body {
 }
 
 .breadcrumbs-item {
-  margin-right: 25px;
+  margin-right: 23px;
 }
 
 .breadcrumbs-item:not(:last-child) {
@@ -976,7 +981,7 @@ body {
   display: block;
   position: absolute;
   top: 6px;
-  right: -18px;
+  right: -15px;
   width: 8px;
   height: 8px;
   background-image: url('../images/icon/icon-breadcrumb-arrow.svg');
@@ -987,7 +992,8 @@ body {
 .house-link {
   display: block;
   width: 14px;
-  min-height: 21px;
+  height: 21px;
+  padding-left: 2px;
   fill: #ffffff;
 }
 
@@ -1033,8 +1039,13 @@ body {
   list-style-type: none;
 }
 
+.catalog-filter-item {
+  display: flex;
+  align-items: center;
+}
+
 .catalog-filter-item:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .catalog-filter-title {
@@ -1064,18 +1075,18 @@ body {
   min-width: 519px;
 }
 
+.control {
+  position: relative;
+}
+
 .control-mark {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1px;
   width: 20px;
   height: 20px;
   border-radius: 4px;
   background-color: #ffffff;
-}
-
-.control {
-  position: relative;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
@@ -1104,7 +1115,7 @@ body {
 }
 
 .control-label {
-  padding-left: 39px;
+  padding-left: 40px;
 }
 
 .group-price {
@@ -1230,7 +1241,7 @@ body {
 .submit {
   width: 160px;
   min-height: 48px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   padding: 14px 35px;
   border: none;
   border-radius: 4px;
@@ -1254,14 +1265,13 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 50px;
-  margin: 55px 72px 53px 72px;
+  margin: 55px 71px 55px 72px;
   padding: 0;
 }
 
 .search-result {
   margin: 0;
-  margin-top: 3px;
-  margin-right: 193px;
+  margin-right: 191px;
   padding: 0;
   font-size: 30px;
   line-height: 36px;
@@ -1274,8 +1284,7 @@ body {
   position: relative;
   width: 290px;
   min-height: 49px;
-  margin-right: 76px;
-  padding-top: 2px;
+  margin-right: 78px;
   padding-left: 18px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1341,7 +1350,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 340px);
   column-gap: 18px;
-  margin: 0 72px 96px 72px;
+  margin: 0 71px 96px 73px;
   padding: 0;
   list-style-type: none;
 }
@@ -1547,11 +1556,10 @@ body {
   color: #ffffff;
   background-color: #82B3D3;
   border-radius: 4px;
-
 }
 
 .label-amount-cards {
-  margin-right: 51px;
+  margin-right: 45px;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
