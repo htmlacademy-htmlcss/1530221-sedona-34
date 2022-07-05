@@ -386,6 +386,7 @@ body {
 
 .blue-block-main {
   display: flex;
+  align-items: center;
 }
 
 .advantages-title {
@@ -507,7 +508,7 @@ body {
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
-  min-width: 142px;
+  max-width: 200px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -570,6 +571,7 @@ body {
 
 /* МОДАЛЬНОЕ ОКНО */
 .modal-container {
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -594,11 +596,12 @@ body {
 
 .modal-close {
   position: absolute;
-  padding: 0;
   top: 55px;
   right: 70px;
+  box-sizing: border-box;
   width: 53px;
   height: 53px;
+  padding: 0;
   cursor: pointer;
   background-color: #f2f2f2;
   border: none;
@@ -980,7 +983,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  top: 6px;
+  top: 7px;
   right: -15px;
   width: 8px;
   height: 8px;
@@ -992,7 +995,8 @@ body {
 .house-link {
   display: block;
   width: 14px;
-  height: 21px;
+  height: 20px;
+  padding-top: 1px;
   padding-left: 2px;
   fill: #ffffff;
 }
@@ -1039,11 +1043,6 @@ body {
   list-style-type: none;
 }
 
-.catalog-filter-item {
-  display: flex;
-  align-items: center;
-}
-
 .catalog-filter-item:not(:last-child) {
   margin-bottom: 15px;
 }
@@ -1077,23 +1076,54 @@ body {
 
 .control {
   position: relative;
+  cursor: pointer;
+  padding-left: 40px;
+}
+.control-input {
+  width: 14px;
+  height: 14px;
 }
 
 .control-mark {
   position: absolute;
-  top: 0;
+  top: 1;
   left: 1px;
+  box-sizing: border-box;
   width: 20px;
   height: 20px;
   border-radius: 4px;
   background-color: #ffffff;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::before {
+.group-infrastructure {
+  max-width: 160px;
+}
+
+.group-infrastructure .control:hover .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.group-infrastructure .control:focus .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+  border: 3px solid #83B3D3;
+}
+
+.group-infrastructure .control:active .control-mark {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.group-type-house {
+  max-width: 160px;
+}
+
+.group-type-house .control:focus .control-mark {
+  border: 3px solid #83B3D3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
   position: absolute;
   width: 20px;
   height: 20px;
-  content: "";
   background-image: url('../images/icon/icon-checked.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -1105,8 +1135,9 @@ body {
 
 .control-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
   width: 10px;
   height: 10px;
   content: "";
@@ -1114,11 +1145,8 @@ body {
   border-radius: 50%;
 }
 
-.control-label {
-  padding-left: 40px;
-}
-
 .group-price {
+  max-width: 288px;
   padding: 0;
   margin: 0;
 }
@@ -1129,13 +1157,23 @@ body {
   margin-bottom: 28px;
 }
 
-.input-price {
-  width: 108px;
-  height: 42px;
-  padding-left: 19px;
-  padding-right: 14px;
+.price-form input {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
   background-color: transparent;
+}
+
+.input-price {
+  width: 144px;
+  padding: 12px 0 11px 17px;
   border: 2px solid #FFFFFF;
+}
+
+.input-price::placeholder {
+  color: #FFFFFF;
 }
 
 .input-price::-webkit-outer-spin-button,
@@ -1144,29 +1182,22 @@ body {
   margin: 0;
 }
 
-.input-price::placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  color: #FFFFFF;
-}
-
 .price-from-wrapper,
 .price-to-wrapper {
   position: relative;
 }
 
 .price-from {
+  box-sizing: border-box;
   border-right: none;
   border-radius: 4px 0 0 4px;
 }
 
 .price-from-description::before {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 14px;
+  top: 45%;
+  transform: translateY(-45%);
+  right: 10px;
   width: 20px;
   height: 20px;
   content: "От";
@@ -1178,14 +1209,15 @@ body {
 }
 
 .price-to {
+  box-sizing: border-box;
   border-radius: 0 4px 4px 0;
 }
 
 .price-to-description::before {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 14px;
+  top: 45%;
+  transform: translateY(-45%);
+  right: 16px;
   width: 20px;
   height: 20px;
   content: "До";
@@ -1194,6 +1226,21 @@ body {
   line-height: 21px;
   text-transform: lowercase;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.price-from:hover,
+.price-to:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.price-from:focus,
+.price-to:focus {
+  box-shadow: 0px 0px 0px 3px #81B3D2;
+}
+
+.price-from:active,
+.price-to:active {
+  background-color: #756257;
 }
 
 .range-scale {
@@ -1220,6 +1267,20 @@ body {
   border-radius: 5px;
 }
 
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  border: 3px solid #83B3D3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  border: 2px solid #83B3D3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
 .toggle-min {
   top: -8px;
   left: 0;
@@ -1227,7 +1288,7 @@ body {
 
 .toggle-max {
   top: -8px;
-  right: -10px;
+  right: -9px;
 }
 
 .group-buttons {
@@ -1241,13 +1302,15 @@ body {
 .submit {
   width: 160px;
   min-height: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding: 14px 35px;
   border: none;
   border-radius: 4px;
 }
 
 .reset {
+  box-sizing: border-box;
+  min-height: 26px;
   padding: 0;
   font-family: inherit;
   font-size: 16px;
@@ -1257,6 +1320,20 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.reset:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.reset:active {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.reset:focus {
+  color: rgba(255, 255, 255, 0.6);
+  outline: none;
 }
 
 /* СОРТИРОВКА КАТАЛОГА ГОСТИНИЦ */
@@ -1270,6 +1347,7 @@ body {
 }
 
 .search-result {
+  width: 338px;
   margin: 0;
   margin-right: 191px;
   padding: 0;
@@ -1282,16 +1360,27 @@ body {
 
 .sort-by-price {
   position: relative;
+  box-sizing: border-box;
   width: 290px;
   min-height: 49px;
   margin-right: 78px;
   padding-left: 18px;
+  cursor: pointer;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   appearance: none;
   background-image: url('../images/select-arrow.svg');
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 17px center;
+}
+
+.sort-by-price:hover,
+.sort-by-price:focus {
+  border: 2px solid #68A2CA;
+}
+
+.sort-by-price:active {
+  border: 2px solid #3F5E72;
 }
 
 .view-control-list {
@@ -1350,7 +1439,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 340px);
   column-gap: 18px;
-  margin: 0 71px 96px 73px;
+  margin: 0 71px 66px 73px;
   padding: 0;
   list-style-type: none;
 }
@@ -1497,8 +1586,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 72px 25px 72px;
+  margin: 0 71px 25px 73px;
   padding: 0;
+  padding-top: 29px;
+  border-top: 1px solid #E6E6E6;
 }
 
 .pagination {
@@ -1570,11 +1661,27 @@ body {
   position: relative;
   width: 160px;
   min-height: 49px;
-  padding-left: 20px;
+  padding-left: 18px;
+  cursor: pointer;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   appearance: none;
   background-image: url('../images/select-arrow.svg');
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 18px center;
+}
+
+.amount-cards:hover,
+.amount-cards:focus {
+  border: 2px solid #68A2CA;
+}
+
+.amount-cards:active {
+  border: 2px solid #3F5E72;
+}
+
+.amount-cards:disabled {
+  opacity: 0.3;
+  border: 2px solid #E5E5E5;
+  cursor: inherit;
 }
