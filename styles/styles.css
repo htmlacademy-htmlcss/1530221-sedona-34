@@ -17,6 +17,7 @@
   font-display: swap;
 }
 
+/* СТРАНИЦЫ */
 html {
   height: 100%;
 }
@@ -34,6 +35,8 @@ body {
 }
 
 .page-container {
+  display: flex;
+  flex-direction: column;
   width: 1200px;
   min-height: 100%;
   margin: 0 auto;
@@ -41,10 +44,14 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* СТРАНИЦЫ */
-.page-header,
+.page-header {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .main-container {
   width: 1200px;
+  flex-grow: 1;
   margin: 0 auto;
 }
 
@@ -1103,8 +1110,8 @@ body {
   background: rgba(255, 255, 255, 0.6);
 }
 
-.group-infrastructure .control:focus .control-mark {
-  background: rgba(255, 255, 255, 0.6);
+.group-infrastructure .control-input:focus + .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid #83B3D3;
 }
 
@@ -1116,7 +1123,7 @@ body {
   max-width: 160px;
 }
 
-.group-type-house .control:focus .control-mark {
+.group-type-house .control-input:focus + .control-mark {
   border: 3px solid #83B3D3;
 }
 
