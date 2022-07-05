@@ -3,8 +3,8 @@
 
   <head>
     <meta charset="utf-8">
-    <link href="styles/styles.css" rel="stylesheet">
-    <link href="./images/favicon.ico" rel="icon"> <!-- 16×16 -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
 
     <title>HTML Academy: Седона</title>
   </head>
@@ -203,7 +203,7 @@
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="date-from-wrapper">
             <label class="label-date-from" for="modal-date-from">Дата заезда:</label>
-            <input class="input-date-from" type="text" id="modal-date-from" name="modal-date-from" placeholder="27 апреля 2020">
+            <input class="input-date-from" type="text" id="modal-date-from" name="modal-date-from" placeholder="27 апреля 2020" required>
           </div>
           <span class="comment-wrapper">
             <span class="visually-hidden">Замечание</span>
@@ -211,7 +211,7 @@
           </span>
           <div class="date-to-wrapper">
             <label class="label-date-to" for="modal-date-to">Дата выезда:</label>
-            <input class="input-date-to" type="text" id="modal-date-to" name="modal-date-to" placeholder="1 сентября 2021">
+            <input class="input-date-to" type="text" id="modal-date-to" name="modal-date-to" placeholder="1 сентября 2021" required>
           </div>
           <span class="comment-wrapper">
             <span class="visually-hidden">Замечание</span>
@@ -221,7 +221,7 @@
             <div class="adult-amount">
               <label class="label-adult-amount" for="modal-adult-amount">Взрослые:</label>
               <div class="adult-input-wrapper">
-                <input class="input-adult-amount" type="number" id="modal-adult-amount" name="modal-adult-amount" placeholder="2">
+                <input class="input-adult-amount" type="number" id="modal-adult-amount" name="modal-adult-amount" placeholder="2" required>
                 <button class="button-amount amount-less">
                   <span class="visually-hidden">Меньше</span>
                   <svg class="icon-minus" aria-hidden="true" focusable="false" width="13" height="1" xmlns="http://www.w3.org/2000/svg">
@@ -245,7 +245,7 @@
                 </span>
               </span>
               <div class="child-input-wrapper">
-                <input class="input-child-amount" type="number" id="modal-child-amount" name="modal-child-amount" placeholder="1">
+                <input class="input-child-amount" type="number" id="modal-child-amount" name="modal-child-amount" placeholder="1" required>
                 <button class="button-amount amount-less">
                   <span class="visually-hidden">Меньше</span>
                   <svg class="icon-minus" aria-hidden="true" focusable="false" width="13" height="1" xmlns="http://www.w3.org/2000/svg">
