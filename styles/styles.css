@@ -409,6 +409,10 @@ body {
   margin: 0;
 }
 
+.advantages-sub-item:first-child .advantages-description {
+  padding: 0 25px;
+}
+
 .advantage-container-sub .advantages-description {
   color: #333333;
 }
@@ -1081,12 +1085,14 @@ body {
   min-width: 519px;
 }
 
-.control {
+.control-checkbox,
+.control-radio {
   position: relative;
   cursor: pointer;
   padding-left: 40px;
 }
-.control-input {
+.control-input-checkbox,
+.control-input-radio {
   width: 14px;
   height: 14px;
 }
@@ -1106,28 +1112,28 @@ body {
   max-width: 160px;
 }
 
-.group-infrastructure .control:hover .control-mark {
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.group-infrastructure .control-input:focus + .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 3px solid #83B3D3;
-}
-
-.group-infrastructure .control:active .control-mark {
-  background: rgba(255, 255, 255, 0.3);
-}
-
 .group-type-house {
   max-width: 160px;
 }
 
-.group-type-house .control-input:focus + .control-mark {
+.control-checkbox:hover .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.control-input-checkbox:focus + .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid #83B3D3;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark {
+.control-checkbox:active .control-mark {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.control-input-radio:focus + .control-mark {
+  border: 3px solid #83B3D3;
+}
+
+.control-input-checkbox[type="checkbox"]:checked + .control-mark {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -1136,11 +1142,11 @@ body {
   background-position: center;
 }
 
-.control-input[type="radio"] + .control-mark {
+.control-input-radio[type="radio"] + .control-mark {
   border-radius: 50%;
 }
 
-.control-input[type="radio"]:checked + .control-mark::before {
+.control-input-radio[type="radio"]:checked + .control-mark::before {
   position: absolute;
   top: 50%;
   left: 50%;
