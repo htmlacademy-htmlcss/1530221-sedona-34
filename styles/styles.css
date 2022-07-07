@@ -1153,7 +1153,7 @@ body {
 
 .control-mark {
   position: absolute;
-  top: 1;
+  top: 1px;
   left: 1px;
   box-sizing: border-box;
   width: 20px;
