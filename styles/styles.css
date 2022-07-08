@@ -407,6 +407,9 @@ body {
 }
 
 .blue-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 1200px;
   color: #ffffff;
   background-color: #82B3D3;
@@ -438,7 +441,18 @@ body {
   color: #333333;
 }
 
+.blue-block-image-end {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;;
+}
+
 .blue-block-image-start {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;;
   order: -1;
 }
 
@@ -489,7 +503,7 @@ body {
 .subscription-index {
   color: #ffffff;
   background: #82B3D3 url("../images/background-subscription.jpeg") no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .subscription-title {
@@ -686,7 +700,6 @@ body {
 
 .modal-title {
   margin: 0;
-  /* padding-left: 1px; */
   margin-bottom: 63px;
   font-weight: 700;
   font-size: 30px;
@@ -1021,6 +1034,7 @@ body {
 
 .breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   margin-bottom: 40px;
@@ -1060,16 +1074,21 @@ body {
   fill: #ffffff;
 }
 
-.breadcrumbs-item:not(.breadcrumbs-current) .breadcrumbs-link:hover {
+.breadcrumbs-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.breadcrumbs-link:hover {
   color: rgba(255, 255, 255, 0.6);
   fill: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-item:not(.breadcrumbs-current) .breadcrumbs-link:focus {
+.breadcrumbs-link:focus {
   outline: none;
 }
 
-.breadcrumbs-item:not(.breadcrumbs-current) .breadcrumbs-link:active {
+.breadcrumbs-link:active {
   color: rgba(255, 255, 255, 0.3);
   fill: rgba(255, 255, 255, 0.3);
 }
@@ -1370,8 +1389,8 @@ body {
 .group-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   padding: 0;
+  padding-top: 60px;
   margin: 0;
 }
 
@@ -1386,8 +1405,9 @@ body {
 
 .reset {
   box-sizing: border-box;
+  max-width: 160px;
   min-height: 26px;
-  padding: 0;
+  padding: 0 35px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -1465,12 +1485,14 @@ body {
 
 .view-control-list {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 160px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.view-control-item:not(:last-child) {
+.view-control-item:not(:nth-child(3n)) {
   margin-right: 8px;
 }
 
@@ -1730,7 +1752,14 @@ body {
   border-radius: 4px;
 }
 
+.control-amount {
+  display: flex;
+  align-items: center;
+  max-width: 386px;
+}
+
 .label-amount-cards {
+  width: 175px;
   margin-right: 45px;
   font-size: 18px;
   line-height: 21px;

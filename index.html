@@ -24,7 +24,7 @@
         <!--ОСНОВНАЯ НАВИГАЦИЯ-->
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link current-site-page">Главная</a>
+            <a class="navigation-link current-site-page" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
@@ -82,26 +82,28 @@
               </div>
               <img class="blue-block-image-end" src="images/advantage-1.jpeg" width="800" height="384" alt="Улица в Седоне.">
             </div>
-            <ul class="advantages-sub-list blue-block-sub">
-              <li class="advantages-sub-item white-blue-block">
-                <div class="advantage-container-sub icon-housing">
-                  <h4 class="advantages-title heading-small">Жильё</h4>
-                  <p class="advantages-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-                </div>
-              </li>
-              <li class="advantages-sub-item">
-                <div class="advantage-container-sub icon-food">
-                  <h4 class="advantages-title heading-small">Еда</h4>
-                  <p class="advantages-description">Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!</p>
-                </div>
-              </li>
-              <li class="advantages-sub-item white-blue-block">
-                <div class="advantage-container-sub icon-souvenirs">
-                  <h4 class="advantages-title heading-small">Сувениры</h4>
-                  <p class="advantages-description">Не только китайского,<br>но и настоящего местного производства!</p>
-                </div>
-              </li>
-            </ul>
+            <div>
+              <ul class="advantages-sub-list blue-block-sub">
+                <li class="advantages-sub-item white-blue-block">
+                  <div class="advantage-container-sub icon-housing">
+                    <h4 class="advantages-title heading-small">Жильё</h4>
+                    <p class="advantages-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                  </div>
+                </li>
+                <li class="advantages-sub-item">
+                  <div class="advantage-container-sub icon-food">
+                    <h4 class="advantages-title heading-small">Еда</h4>
+                    <p class="advantages-description">Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!</p>
+                  </div>
+                </li>
+                <li class="advantages-sub-item white-blue-block">
+                  <div class="advantage-container-sub icon-souvenirs">
+                    <h4 class="advantages-title heading-small">Сувениры</h4>
+                    <p class="advantages-description">Не только китайского,<br>но и настоящего местного производства!</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="advantages-main-item blue-block">
             <div class="blue-block-main">
@@ -196,7 +198,7 @@
     <!-- МОДАЛЬНОЕ ОКНО -->
     <div class="modal-container modal-container-close">
       <div class="modal modal-search">
-        <button class="modal-close">
+        <button class="modal-close" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
@@ -222,13 +224,13 @@
               <label class="label-adult-amount" for="modal-adult-amount">Взрослые:</label>
               <div class="adult-input-wrapper">
                 <input class="input-adult-amount" type="number" id="modal-adult-amount" name="modal-adult-amount" placeholder="2" required>
-                <button class="button-amount amount-less">
+                <button class="button-amount amount-less" type="button">
                   <span class="visually-hidden">Меньше</span>
                   <svg class="icon-minus" role="img" aria-label="Знак минус." aria-hidden="true" focusable="false" width="13" height="1" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0v1h13V0H0Z" fill="#000"/>
                   </svg>
                 </button>
-                <button class="button-amount amount-more">
+                <button class="button-amount amount-more" type="button">
                   <span class="visually-hidden">Больше</span>
                   <svg class="icon-plus" role="img" aria-label="Знак плюс." aria-hidden="true" focusable="false" width="13" height="13" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
@@ -246,13 +248,13 @@
               </span>
               <div class="child-input-wrapper">
                 <input class="input-child-amount" type="number" id="modal-child-amount" name="modal-child-amount" placeholder="1" required>
-                <button class="button-amount amount-less">
+                <button class="button-amount amount-less" type="button">
                   <span class="visually-hidden">Меньше</span>
                   <svg class="icon-minus" role="img" aria-label="Знак минус." aria-hidden="true" focusable="false" width="13" height="1" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0v1h13V0H0Z" fill="#000"/>
                   </svg>
                 </button>
-                <button class="button-amount amount-more">
+                <button class="button-amount amount-more" type="button">
                   <span class="visually-hidden">Больше</span>
                   <svg class="icon-plus" role="img" aria-label="Знак плюс." aria-hidden="true" focusable="false" width="13" height="13" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
